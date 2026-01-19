@@ -499,7 +499,7 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
     padding: var(--spacing-xl) var(--spacing-md);
-    background-image: url('/assets/boavista.png');
+    background-image: url('./../assets/boavista.png');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;

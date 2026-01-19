@@ -150,7 +150,7 @@ img {
 .hero {
     height: 100vh;
     max-height: 100vh;
-    background-image: url('../assets/banner.jpg');
+    background-image: url('./../assets/banner.jpg');
     background-size: cover;
     background-position: center;
     

@@ -103,4 +103,4 @@ Para dúvidas ou sugestões sobre o convite, entre em contato com os noivos.
 
 ---
 
-*Criado com carinho do padrinho Augusto para o casamento de Aquila & Evelyn*
+*Criado com carinho pelo padrinho Augusto para o casamento de Aquila & Evelyn*

@@ -192,14 +192,15 @@ function updateGallery() {
     const isMobile = window.innerWidth <= 480;
     const isTablet = window.innerWidth <= 768;
     
-    let itemsToShow = 4; // Desktop
+    let gapSize = 30;
+    let itemsToShow = 4;
     if (isMobile) {
         itemsToShow = 1;
+        gapSize = -20; 
     } else if (isTablet) {
         itemsToShow = 2;
     }
     
-    const gapSize = 30; 
     const containerWidth = galleryTrack.parentElement.offsetWidth;
     const itemWidth = (containerWidth / itemsToShow);
     const distancePerSlide = itemWidth + gapSize; 
@@ -245,6 +246,25 @@ function fallbackCopyPix(text) {
     }
     
     document.body.removeChild(textArea);
+}
+
+// ============================================
+// ACCORDION DE ESTACIONAMENTO
+// ============================================
+function toggleAccordion(headerButton) {
+    const accordionItem = headerButton.parentElement;
+    const isActive = accordionItem.classList.contains('active');
+    
+    // Fechar todos os outros acordeões
+    const allItems = document.querySelectorAll('.accordion-item');
+    allItems.forEach(item => {
+        if (item !== accordionItem) {
+            item.classList.remove('active');
+        }
+    });
+    
+    // Toggle o acordeão atual
+    accordionItem.classList.toggle('active');
 }
 
 // ============================================

@@ -15,15 +15,11 @@
 			<div class="hero-overlay"></div>
 			<div class="hero-content">
 				<h1 class="hero-title">
-					<span class="name-line">Aquila</span>
-					<span class="ampersand">&</span>
-					<span class="name-line">Evelyn</span>
+					<span class="bride-name name-line"><img src="../assets/aquila.png" alt="Nome do noivo"></span>
+                	<span class="ampersand">&</span>
+                	<span class="groom-name name-line"><img src="../assets/evelyn.png" alt="Nome da noiva"></span>
+            
 				</h1>
-				<div class="hero-date">
-					<span class="date-day">Domingo</span>
-					<span class="date-main">03 de Maio, 2026</span>
-					<span class="date-time">16h30</span>
-				</div>
 				<blockquote class="hero-quote">
 					<p>
 						"O amor só é lindo quando encontramos alguém que nos transforme no melhor que podemos ser"
@@ -130,11 +126,6 @@
 							<br>
 							Santo André - SP
 						</p>
-						<a href="https://maps.google.com/?q=Rua+Oratório,+3921,+Santo+André"
-							target="_blank"
-							class="info-link">
-							Ver no Mapa
-						</a>
 					</div>
 					<div class="info-card">
 						<div class="info-icon">
@@ -150,9 +141,9 @@
 						<p>
 							Passeio Completo
 							<br>
-							Sugerimos cores claras
+							Evite tons de verde e lilás
 							<br>
-							e tons de verde
+							<span>Use calçados confortáveis</span>
 						</p>
 					</div>
 				</div>
@@ -162,7 +153,7 @@
 		<!-- Localização - Imagem e Mapa -->
 		<section class="location-section">
 			<div class="location-image">
-				<img src="./assets/location.jpg"
+				<img src="./assets/location/loc1.jpg"
 					alt="Local do evento - Rua Oratório">
 			</div>
 			<div class="location-map">
@@ -180,6 +171,54 @@
 						</a>
 					</div>
 					<style>.embed-map-fixed{position:relative;text-align:right;width:100%;height:auto;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:inherit;}.embed-map-frame{width:100%!important;height:inherit!important;}</style>
+				</div>
+			</div>
+		</section>
+
+		<!-- Estacionamento -->
+		<section class="section parking-section">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-tag">Informações Úteis</span>
+					<h2 class="section-title">Local</h2>
+					<p class="section-subtitle">
+						Conheça as opções de estacionamento próximas ao local do evento
+					</p>
+				</div>
+				<div class="parking-accordion">
+					<div class="accordion-item">
+						<button class="accordion-header" onclick="toggleAccordion(this)">
+							<span class="accordion-title">Estacionamento Próximo ao Local</span>
+							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</button>
+						<div class="accordion-content">
+							<div class="accordion-body">
+								<p><strong>Local:</strong> Rua Oratório, 3945. Parque Novo Oratório - Santo André, SP</p>
+								<p><strong>Distância:</strong> Ao lado do local</p>
+								<p><strong>Custo:</strong> 20 reais - por período</p>
+								<p><strong>Segurança:</strong> Monitorado durante toda a cerimônia</p>
+								<p><strong>Observação:</strong> Muro preto do portão azul, ao lado do ponto de ônibus.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion-item">
+						<button class="accordion-header" onclick="toggleAccordion(this)">
+							<span class="accordion-title">Transporte Alternativo</span>
+							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</button>
+						<div class="accordion-content">
+							<div class="accordion-body">
+								<p><strong>Uber/99:</strong> Recomendado para facilitar o retorno após as celebrações</p>
+								<p><strong>Transporte Público:</strong> Linhas de ônibus e trólebus próximas à Rua Oratório</p>
+								<p><strong>Dica:</strong> Se você planeja celebrar conosco, considere uma dessas opções para maior segurança!</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -500,10 +539,10 @@
 					<p class="footer-date">03 de Maio de 2026</p>
 					<p class="footer-contact">
 						Dúvidas? Entre em contato:
-						<a href="mailto:{{EMAIL_DEDICADO}}">{{EMAIL_DEDICADO}}</a>
+						<a href="mailto:casamento.aquilaeevelyn@gmail.com">casamento.aquilaeevelyn@gmail.com</a>
 					</p>
 					<p class="footer-copy">
-						&copy; 2026 - Feito com amor
+						&copy; 2026 - Feito com amor por Augusto
 					</p>
 				</div>
 			</div>

@@ -2,7 +2,7 @@
 // CONFIGURAÇÃO E CONSTANTES
 // ============================================
 const CONFIG = {
-    weddingDate: new Date('2026-05-03T16:30:00').getTime(),
+    weddingDate: new Date('2026-05-03T16:00:00').getTime(),
     apiEndpoint: '/api/depoimentos',
     animationDelay: 100
 };
@@ -192,7 +192,7 @@ function updateGallery() {
     const isMobile = window.innerWidth <= 480;
     const isTablet = window.innerWidth <= 768;
     
-    let gapSize = 30;
+    let gapSize = 27;
     let itemsToShow = 4;
     if (isMobile) {
         itemsToShow = 1;
@@ -216,7 +216,7 @@ function updateGallery() {
 
 
 function copyPix() {
-    const pixKey = '{{EMAIL_DEDICADO}}';
+    const pixKey = 'casamento.aquilaeevelyn@gmail.com';
     
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(pixKey).then(() => {

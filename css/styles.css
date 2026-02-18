@@ -270,21 +270,21 @@ img {
 
 .hero-quote {
     max-width: 600px;
-    margin: var(--spacing-md) auto;
+    margin: var(--spacing-md) auto var(--spacing-lg);
     animation: fadeInUp 1s ease both 1s;
 }
 
 .hero-quote p {
     font-style: italic;
-    color: var(--color-text-light);
+    color: var(--color-text);
     font-size: var(--font-size-md);
     line-height: 1.8;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
 }
 
 .hero-quote cite {
     font-size: var(--font-size-sm);
-    color: var(--color-text-lighter);
+    color: var(--color-text-light);
     font-style: normal;
 }
 
@@ -356,7 +356,7 @@ img {
    SECTION STYLES
 ============================================ */
 .section {
-    padding: var(--spacing-xl) var(--spacing-sm);
+    padding: var(--spacing-lg) var(--spacing-sm);
 }
 
 .section-header {
@@ -401,7 +401,7 @@ img {
 .story-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
     align-items: center;
 }
 
@@ -410,17 +410,19 @@ img {
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     aspect-ratio: 4/5;
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 .story-content {
-    padding: var(--spacing-md);
+    padding: var(--spacing-xs);
 }
 
-.story-text {
-    font-size: var(--font-size-md);
+.story-content p {
+    font-size: var(--font-size-sm);
     color: var(--color-text-light);
     line-height: 1.8;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 /* ============================================
@@ -487,10 +489,11 @@ img {
     color: var(--color-text-light);
     line-height: 1.8;
     font-size: var(--font-size-md);
+    font-weight: 400;
 }
 
-.info-card:nth-child(3) span{
-    font-weight: 800;
+.info-card span{
+    font-weight: 600;
 }
 
 .info-link {
@@ -944,6 +947,7 @@ img {
     justify-content: center;
     gap: var(--spacing-xs);
     margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 .dot {

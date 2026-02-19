@@ -355,14 +355,26 @@ function generatePix() {
 
     // Gerar QR Code
     const img = document.getElementById('pix-qrcode-img');
+    const pixString = document.getElementById('pix-string');
     img.style.display = 'none'; // Esconder enquanto carrega
+    pixString.style.display = 'none';
+    pixString.value = pixCode;
+    pixString.addEventListener('click', function() {
+        navigator.clipboard.writeText(this.value).then(() => {
+            showNotification('PIX copiada!', 'success');
+        }).catch(() => {
+            showNotification('Erro ao copiar.', 'error');
+        });
+    });
     const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(pixCode);
     img.src = qrUrl;
     img.onload = function() {
         img.style.display = 'block';
+        pixString.style.display = 'block';
     };
     img.onerror = function() {
         showNotification('Erro ao gerar QR Code', 'error');
+        pixString.style.display = 'none';
     };
 }
 
@@ -583,28 +595,55 @@ function initSmoothScroll() {
 }
 
 // ============================================
+// LOCATION IMAGES EXPAND ON CLICK
+// ============================================
+function initLocationImages() {
+    const locationImages = document.querySelectorAll('.location-image img');
+    locationImages.forEach(img => {
+        img.addEventListener('click', () => {
+            // If already expanded, reset all
+            if (img.classList.contains('expanded')) {
+                locationImages.forEach(i => {
+                    i.classList.remove('expanded');
+                    i.classList.remove('shrunk');
+                });
+            } else {
+                // Remove expanded and shrunk from all
+                locationImages.forEach(i => {
+                    i.classList.remove('expanded');
+                    i.classList.add('shrunk');
+                });
+                // Add expanded to clicked, remove shrunk
+                img.classList.add('expanded');
+                img.classList.remove('shrunk');
+            }
+        });
+    });
+}
+
+// ============================================
 // INICIALIZAÇÃO
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
     // Countdown
     updateCountdown();
     setInterval(updateCountdown, 1000);
-    
+
     // Carousel
     initCarousel();
     startCarouselAutoPlay();
-    
+
     // Gallery Carousel
     initGalleryCarousel();
     updateGallery();
-    
+
     // Pausar auto-play ao interagir
     const carousel = document.querySelector('.carousel');
     if (carousel) {
         carousel.addEventListener('mouseenter', stopCarouselAutoPlay);
         carousel.addEventListener('mouseleave', startCarouselAutoPlay);
     }
-    
+
     // Carrinho
     document.querySelectorAll('.add-to-cart').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -612,15 +651,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     document.getElementById('generate-pix').addEventListener('click', generatePix);
-    
+
     // Carregar depoimentos
     fetchTestimonials();
     addTestimonialsSwipeListener();
 
+    // Location images
+    initLocationImages();
+
     // Animações
     initScrollAnimations();
     initSmoothScroll();
-    
+
     console.log('Site de casamento inicializado! ');
 });
 

@@ -244,7 +244,7 @@ body {
 }
 
 .banner-title {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
 }
 
 .title-line {

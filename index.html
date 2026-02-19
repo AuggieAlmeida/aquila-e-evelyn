@@ -12,12 +12,11 @@
 	<body>
 		<!-- Hero Section -->
 		<section class="hero">
-			<div class="hero-overlay"></div>
 			<div class="hero-content">
 				<h1 class="hero-title">
-					<span class="bride-name name-line"><img src="./assets/aquila.png" alt="Nome do noivo"></span>
+					<span class="groom-name name-line"><img src="./assets/aquila.png" alt="Nome do noivo"></span>
                 	<span class="ampersand">&</span>
-                	<span class="groom-name name-line"><img src="./assets/evelyn.png" alt="Nome da noiva"></span>
+                	<span class="bride-name name-line"><img src="./assets/evelyn.png" alt="Nome da noiva"></span>
             
 				</h1>
 				<blockquote class="hero-quote">
@@ -26,10 +25,9 @@
 					</p>
 					<cite>— Mario Quintana</cite>
 				</blockquote>
-				<a href="#rsvp"
-					class="cta-primary">
+				<div class="cta-primary">
 					Confirmar Presença
-				</a>
+				</div>
 			</div>
 			<div class="scroll-indicator">
 				<svg viewBox="0 0 24 24"
@@ -45,7 +43,7 @@
 		</section>
 
 		<!-- Nossa Jornada -->
-		<section class="section story-section">
+		<section class="section story-section" id="story">
 			<div class="container">
 				<div class="section-header">
 					<span class="section-tag">Nossa Jornada</span>
@@ -53,7 +51,7 @@
 				</div>
 				<div class="story-grid">
 					<div class="story-image">
-						<img src="./assets/pic.jpg"
+						<img src="./assets/hero.jpg"
 							alt="Aquila e Evelyn juntos">
 					</div>
 					<div class="story-content">
@@ -196,7 +194,7 @@
 							Retro Games Online
 						</a>
 					</div>
-					<style>.embed-map-fixed{position:relative;text-align:right;width:100%;height:auto;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:inherit;}.embed-map-frame{width:100%!important;height:inherit!important;}</style>
+					<style>.embed-map-fixed{position:relative;text-align:right;width:100%;height:100%;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:inherit;}.embed-map-frame{width:100%!important;height:inherit!important;}</style>
 				</div>
 			</div>
 		</section>
@@ -214,7 +212,7 @@
 				<div class="parking-accordion">
 					<div class="accordion-item">
 						<button class="accordion-header" onclick="toggleAccordion(this)">
-							<span class="accordion-title">Estacionamento Próximo ao Local</span>
+							<span class="accordion-title">Estacionamento próximo ao local</span>
 							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 							</svg>
@@ -232,7 +230,7 @@
 
 					<div class="accordion-item">
 						<button class="accordion-header" onclick="toggleAccordion(this)">
-							<span class="accordion-title">Transporte Alternativo</span>
+							<span class="accordion-title">Transporte alternativo</span>
 							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 							</svg>
@@ -240,7 +238,7 @@
 						<div class="accordion-content">
 							<div class="accordion-body">
 								<p><strong>Uber/99:</strong> Recomendado para facilitar o retorno após as celebrações</p>
-								<p><strong>Transporte Público:</strong> Linhas de ônibus e trólebus próximas à Rua Oratório</p>
+								<p><strong>Transporte público:</strong> Linhas de ônibus e trólebus próximas à Rua Oratório</p>
 								<p><strong>Dica:</strong> Se você planeja celebrar conosco, considere uma dessas opções para maior segurança!</p>
 							</div>
 						</div>
@@ -397,43 +395,280 @@
 					<div class="carousel-track"
 						id="carouselTrack">
 						<div class="gift-card">
-							<div class="gift-icon">.</div>
-							<h3>Lista Tok&Stok</h3>
-							<p>
-								Escolha um presente especial para nosso novo lar através da nossa lista na Tok&Stok
-							</p>
-							<a href="{{LINK_LISTA_PRESENTES}}"
-								target="_blank"
-								class="gift-btn">
-								Ver Lista
-							</a>
+							<div class="gift-icon"><img src="./assets/gifts/acidente-bouquet.jpg"></div>
+							<h3>Seguro acidente pra hora do bouquet</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 65,00</div>
+							<button class="gift-btn add-to-cart" data-price="65.00" data-title="Seguro acidente pra hora do bouquet">Adicionar ao Carrinho</button>
 						</div>
 						<div class="gift-card">
-							<div class="gift-icon">.</div>
-							<h3>Lista Leroy Merlin</h3>
-							<p>
-								Ajude-nos a construir nosso cantinho com itens da Leroy Merlin
-							</p>
-							<a href="{{LINK_LISTA_PRESENTES}}"
-								target="_blank"
-								class="gift-btn">
-								Ver Lista
-							</a>
+							<div class="gift-icon"><img src="./assets/gifts/barra-vestido-noiva.jpg"></div>
+							<h3>Espaço para nome na barra do vestido</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 100,00</div>
+							<button class="gift-btn add-to-cart" data-price="100.00" data-title="Espaço para nome na barra do vestido">Adicionar ao Carrinho</button>
 						</div>
 						<div class="gift-card">
-							<div class="gift-icon">.</div>
-							<h3>Lista Camicado</h3>
-							<p>
-								Confira nossa seleção de utensílios e decoração na Camicado
-							</p>
-							<a href="{{LINK_LISTA_PRESENTES}}"
-								target="_blank"
-								class="gift-btn">
-								Ver Lista
-							</a>
+							<div class="gift-icon"><img src="./assets/gifts/abencoado.jpg"></div>
+							<h3>Deus te iluminou e você resolveu dar um bom presente</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 200,00</div>
+							<button class="gift-btn add-to-cart" data-price="200.00" data-title="Deus te iluminou e você resolveu dar um bom presente">Adicionar ao Carrinho</button>
 						</div>
 						<div class="gift-card">
-							<div class="gift-icon">.</div>
+							<div class="gift-icon"><img class="bigger" src="./assets/gifts/fantasia-noivo.jpg"></div>
+							<h3>Fantasia sexy pro noivo usar na lua de mel</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 120,00</div>
+							<button class="gift-btn add-to-cart" data-price="120.00" data-title="Fantasia sexy pro noivo usar na lua de mel">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img class="bigger" src="./assets/gifts/mesa-doces.jpg"></div>
+							<h3>Sentar próximo a mesa de doces</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 150,00</div>
+							<button class="gift-btn add-to-cart" data-price="150.00" data-title="Sentar próximo a mesa de doces">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/foto-noivo.jpg"></div>
+							<h3>Tirar foto com o noivo</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 20,00</div>
+							<button class="gift-btn add-to-cart" data-price="20.00" data-title="Tirar foto com o noivo">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/mao-de-vaca.png"></div>
+							<h3>Só para não dizer que não dei nada</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 25,00</div>
+							<button class="gift-btn add-to-cart" data-price="25.00" data-title="Só para não dizer que não dei nada">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img class="bigger" src="./assets/gifts/fantasia-noiva.jpg"></div>
+							<h3>Fantasia sexy pra noiva usar na lua de mel</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 120,00</div>
+							<button class="gift-btn add-to-cart" data-price="120.00" data-title="Fantasia sexy pra noiva usar na lua de mel">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img class="bigger" src="./assets/gifts/quarto-visitas.jpg"></div>
+							<h3>Passe prioritário para o quarto de visitas</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 150,00</div>
+							<button class="gift-btn add-to-cart" data-price="150.00" data-title="Passe prioritário para o quarto de visitas">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/bolo-cenoura.jpg"></div>
+							<h3>Bolo de cenoura semanal para a noiva</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 80,00</div>
+							<button class="gift-btn add-to-cart" data-price="80.00" data-title="Bolo de cenoura semanal para a noiva">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/fila-buffet.jpg"></div>
+							<h3>Prioridade na fila do buffet</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 90,00</div>
+							<button class="gift-btn add-to-cart" data-price="90.00" data-title="Prioridade na fila do buffet">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/curso-culinaria-noiva.png"></div>
+							<h3>Curso de culinária para a noiva</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 100,00</div>
+							<button class="gift-btn add-to-cart" data-price="100.00" data-title="Curso de culinária para a noiva">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/jantar-pos-casamento.jpg"></div>
+							<h3>Jantar dos noivos no primeiro dia de casados</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 60,00</div>
+							<button class="gift-btn add-to-cart" data-price="60.00" data-title="Jantar dos noivos no primeiro dia de casados">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/curso-culinaria-noivo.jpg"></div>
+							<h3>Curso de culinária para o noivo</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 100,00</div>
+							<button class="gift-btn add-to-cart" data-price="100.00" data-title="Curso de culinária para o noivo">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img class="bigger" src="./assets/gifts/noivo-brega.jpg"></div>
+							<h3>Impedir o noivo de usar gravata brega</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 250,00</div>
+							<button class="gift-btn add-to-cart" data-price="250.00" data-title="Impedir o noivo de usar gravata brega">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/forno-mondial.jpg"></div>
+							<h3>Forno elétrico Mondial com timer 6L preto Pratic Cook FR-09</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 236,55</div>
+							<button class="gift-btn add-to-cart" data-price="236.55" data-title="Forno elétrico Mondial com timer 6L preto Pratic Cook FR-09">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/liquidificador-mondial.jpg"></div>
+							<h3>Liquidificador Mondial Easy Power L-550 preto</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 30,00</div>
+							<button class="gift-btn add-to-cart" data-price="30.00" data-title="Liquidificador Mondial Easy Power L-550 preto">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/lava-loucas.jpg"></div>
+							<h3>Lava-louças Brastemp 8 serviços BLF08 - Cinza metálico</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 2.699,00</div>
+							<button class="gift-btn add-to-cart" data-price="2699.00" data-title="Lava-louças Brastemp 8 serviços BLF08 - Cinza metálico">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img class="bigger" src="./assets/gifts/rolo-massas.jpg"></div>
+							<h3>Rolo de macarrão para a noiva utilizar quando necessário</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 100,00</div>
+							<button class="gift-btn add-to-cart" data-price="100.00" data-title="Rolo de macarrão para a noiva utilizar quando necessário">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/varios-streamings.png"></div>
+							<h3>Ajudar a pagar todos os milhares de streamings</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 300,00</div>
+							<button class="gift-btn add-to-cart" data-price="300.00" data-title="Ajudar a pagar todos os milhares de streamings">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/shot-tequila.jpg"></div>
+							<h3>Vale shot de tequila para os noivos tomarem na festa</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 30,00</div>
+							<button class="gift-btn add-to-cart" data-price="30.00" data-title="Vale shot de tequila para os noivos tomarem na festa">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/excesso-bagagens.jpg"></div>
+							<h3>Ajudar a pagar o excesso de bagagem da noiva</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 300,00</div>
+							<button class="gift-btn add-to-cart" data-price="300.00" data-title="Ajudar pra pagar o excesso de bagagem da noiva">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/sanduicheira-mondial.jpg"></div>
+							<h3>Sanduicheira Mondial Fast Grill S-12 preta 750W - Antiaderente</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 110,00</div>
+							<button class="gift-btn add-to-cart" data-price="110.00" data-title="Sanduicheira Mondial Fast Grill S-12 preta 750W - Antiaderente">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/pipoqueira-mondial.jpg"></div>
+							<h3>Pipoqueira elétrica Mondial Popflix PP-03 1200W</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 205,39</div>
+							<button class="gift-btn add-to-cart" data-price="205.39" data-title="Pipoqueira elétrica Mondial Popflix PP-03 1200W">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/chaleira-mondial.jpg"></div>
+							<h3>Chaleira elétrica Mondial Pratic Hot CE-07 preta 1L</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 114,90</div>
+							<button class="gift-btn add-to-cart" data-price="114.90" data-title="Chaleira elétrica Mondial Pratic Hot CE-07 preta 1L">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/panela-grill-mondial.jpg"></div>
+							<h3>Panela elétrica multifuncional Grill redonda - Mondial</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 235,55</div>
+							<button class="gift-btn add-to-cart" data-price="235.55" data-title="Panela elétrica multifuncional Grill redonda - Mondial">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/purificador-consul.jpg"></div>
+							<h3>Purificador de Água Consul CPB34AF - Cinza</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 521,90</div>
+							<button class="gift-btn add-to-cart" data-price="521.90" data-title="Purificador de Água Consul CPB34AF - Cinza">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/robo-aspirador.jpg"></div>
+							<h3>Robô aspirador Electrolux ERB30</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 1.181,71</div>
+							<button class="gift-btn add-to-cart" data-price="1181.71" data-title="Robô aspirador Electrolux ERB30">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img class="bigger" src="./assets/gifts/espaco-manduu.jpg"></div>
+							<h3>Jantar no Espaço Manduu</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 300,00</div>
+							<button class="gift-btn add-to-cart" data-price="300.00" data-title="Jantar no Espaço Manduu">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/diaria-hotel.jpg"></div>
+							<h3>Diária - hotel</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 350,00</div>
+							<button class="gift-btn add-to-cart" data-price="350.00" data-title="Diária - hotel">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img class="bigger" src="./assets/gifts/Garrafa-espumante.jpg"></div>
+							<h3>Garrafa de vinho espumante</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 100,00</div>
+							<button class="gift-btn add-to-cart" data-price="100.00" data-title="Garrafa de vinho espumante">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/casal-barco.jpg"></div>
+							<h3>Passeio de barco - casal</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 380,00</div>
+							<button class="gift-btn add-to-cart" data-price="380.00" data-title="Passeio de barco - casal">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/Jogo-cama-cinza.jpg"></div>
+							<h3>Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Cinza</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 37,86</div>
+							<button class="gift-btn add-to-cart" data-price="37.86" data-title="Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Cinza">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/Jogo-cama-preto.jpg"></div>
+							<h3>Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Preto</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 36,13</div>
+							<button class="gift-btn add-to-cart" data-price="36.13" data-title="Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Preto">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/Jogo-cama-branco.jpg"></div>
+							<h3>Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Branco</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 37,86</div>
+							<button class="gift-btn add-to-cart" data-price="37.86" data-title="Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Branco">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/cobertor-jolitex.jpg"></div>
+							<h3>Cobertor casal Jolitex poliéster azulejo</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 145,48</div>
+							<button class="gift-btn add-to-cart" data-price="145.48" data-title="Cobertor casal Jolitex poliéster azulejo">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/colcha-karsten.jpg"></div>
+							<h3>Colcha casal Karsten 100% algodão branco e bege</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 249,43</div>
+							<button class="gift-btn add-to-cart" data-price="249.43" data-title="Colcha casal Karsten 100% algodão branco e bege">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/Jogo-taca-385.jpg"></div>
+							<h3>Jogo de taças para vinho vidro 385ml 6 peças - Nadir Barone</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 64,30</div>
+							<button class="gift-btn add-to-cart" data-price="64.30" data-title="Jogo de taças para vinho vidro 385ml 6 peças - Nadir Barone">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon"><img src="./assets/gifts/Jogo-taca-450.jpg"></div>
+							<h3>Jogo de taças para vinho vidro 450ml 6 peças - Haus</h3>
+							<p>Adicione à sua lista de compras.</p>
+							<div class="pix-value">R$ 119,88</div>
+							<button class="gift-btn add-to-cart" data-price="119.88" data-title="Jogo de taças para vinho vidro 450ml 6 peças - Haus">Adicionar ao Carrinho</button>
+						</div>
+						<div class="gift-card">
+							<div class="gift-icon gift-pix"><img src="./assets/gifts/qrcode-pix.png"></div>
 							<h3>PIX</h3>
 							<p>
 								Prefere contribuir diretamente? Ficaremos muito felizes!
@@ -469,8 +704,15 @@
 							</svg>
 						</button>
 					</div>
-					<div class="carousel-dots"
-						id="carouselDots"></div>
+				</div>
+				<div class="cart-summary">
+					<h3>Carrinho de Compras</h3>
+					<ul id="cart-items"></ul>
+					<div class="cart-total">Total: R$ <span id="cart-total">0,00</span></div>
+					<button id="generate-pix" class="gift-btn">Gerar PIX</button>
+					<div id="pix-qrcode">
+						<img id="pix-qrcode-img" alt="QR Code PIX" style="display:none;">
+					</div>
 				</div>
 			</div>
 		</section>
@@ -487,47 +729,39 @@
 						Compartilhe suas palavras de carinho e bons votos para o casal
 					</p>
 				</div>
-				<div class="testimonials-grid">
-					<div class="testimonial-form-card">
-						<h3>Envie sua Mensagem</h3>
-						<form id="testimonialForm">
-							<div class="form-group">
-								<label for="authorName">Seu Nome</label>
-								<input type="text"
-									id="authorName"
-									name="autor"
-									required
-									placeholder="Digite seu nome">
-							</div>
-							<div class="form-group">
-								<label for="authorEmail">E-mail (opcional)</label>
-								<input type="email"
-									id="authorEmail"
-									name="email"
-									placeholder="seu@email.com">
-							</div>
-							<div class="form-group">
-								<label for="message">Mensagem</label>
-								<textarea id="message"
-									name="mensagem"
-									required
-									placeholder="Escreva sua mensagem para o casal..."
-									rows="5"></textarea>
-							</div>
-							<button type="submit"
-								class="submit-btn">
-								Enviar Depoimento
-							</button>
-						</form>
-					</div>
-					<div class="testimonials-list"
-						id="testimonialsList">
+				<div class="testimonials-carousel">
+					<div class="testimonials-carousel-track"
+						id="testimonialsTrack">
 						<div class="testimonials-loading">
 							<div class="loading-spinner"></div>
 							<p>
 								Carregando depoimentos...
 							</p>
 						</div>
+					</div>
+					<div class="testimonials-carousel-controls">
+						<button class="carousel-btn prev"
+							onclick="moveTestimonials(-1)">
+							<svg viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 18l-6-6 6-6"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"></path>
+							</svg>
+						</button>
+						<button class="carousel-btn next"
+							onclick="moveTestimonials(1)">
+							<svg viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M9 18l6-6-6-6"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"></path>
+							</svg>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -544,7 +778,7 @@
 					<p class="rsvp-text">
 						Por favor, confirme sua presença até 03 de Abril de 2026.
 					</p>
-					<a href="{{LINK_RSVP}}"
+					<a href="https://forms.gle/eeJLr5Uppvkh39CZ9"
 						target="_blank"
 						class="cta-primary">
 						Confirmar Agora

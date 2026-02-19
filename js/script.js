@@ -36,7 +36,7 @@ function updateCountdown() {
 // ============================================
 let currentSlide = 0;
 const carouselTrack = document.getElementById('carouselTrack');
-const totalSlides = carouselTrack ? carouselTrack.children.length : 0;
+let totalSlides = carouselTrack ? carouselTrack.children.length : 0;
 
 function initCarousel() {
     const dotsContainer = document.getElementById('carouselDots');
@@ -302,46 +302,173 @@ function showNotification(message, type = 'info') {
 }
 
 // ============================================
+// CARRINHO DE COMPRAS
+// ============================================
+let cart = [];
+
+function addToCart(price, title) {
+    cart.push({price: parseFloat(price), title});
+    updateCart();
+    showNotification(`${title} adicionado ao carrinho!`, 'success');
+}
+
+function updateCart() {
+    const cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = cart.map(item => `<li>${item.title} - R$ ${item.price.toFixed(2).replace('.', ',')}</li>`).join('');
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    document.getElementById('cart-total').textContent = total.toFixed(2).replace('.', ',');
+}
+
+function crc16(str) {
+    let crc = 0xFFFF;
+    for (let i = 0; i < str.length; i++) {
+        crc ^= str.charCodeAt(i) << 8;
+        for (let j = 0; j < 8; j++) {
+            if (crc & 0x8000) {
+                crc = (crc << 1) ^ 0x1021;
+            } else {
+                crc <<= 1;
+            }
+        }
+    }
+    return (crc & 0xFFFF).toString(16).toUpperCase().padStart(4, '0');
+}
+
+function generatePix() {
+    if (cart.length === 0) {
+        showNotification('Carrinho vazio!', 'error');
+        return;
+    }
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    const valor = total.toFixed(2);
+    const tam_valor = valor.length.toString().padStart(2, '0');
+    const base = `00020126550014BR.GOV.BCB.PIX0133casamento.aquilaeevelyn@gmail.com52040000530398654${tam_valor}${valor}5802BR5901N6001C62070503***6304`;
+    const crc = crc16(base);
+    const pixCode = base + crc;
+
+    // Copiar para clipboard
+    navigator.clipboard.writeText(pixCode).then(() => {
+        showNotification('Código PIX copiado!', 'success');
+    }).catch(() => {
+        showNotification('Erro ao copiar. Código: ' + pixCode, 'error');
+    });
+
+    // Gerar QR Code
+    const img = document.getElementById('pix-qrcode-img');
+    img.style.display = 'none'; // Esconder enquanto carrega
+    const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(pixCode);
+    img.src = qrUrl;
+    img.onload = function() {
+        img.style.display = 'block';
+    };
+    img.onerror = function() {
+        showNotification('Erro ao gerar QR Code', 'error');
+    };
+}
+
+// ============================================
+// CAROUSEL DE DEPOIMENTOS
+// ============================================
+let testimonialsSlide = 0;
+let totalTestimonialsSlides = 0;
+
+function moveTestimonials(direction) {
+    const isMobile = window.innerWidth <= 768;
+    testimonialsSlide += direction;
+
+    if (isMobile) {
+        // Mobile: loop completo
+        if (testimonialsSlide < 0) testimonialsSlide = totalTestimonialsSlides - 1;
+        if (testimonialsSlide >= totalTestimonialsSlides) testimonialsSlide = 0;
+    } else {
+        // Desktop: loop parcial para mostrar 2 itens
+        if (testimonialsSlide < 0) testimonialsSlide = totalTestimonialsSlides - 2;
+        if (testimonialsSlide >= totalTestimonialsSlides - 1) testimonialsSlide = 0;
+    }
+
+    updateTestimonials();
+}
+
+function updateTestimonials() {
+    const track = document.getElementById('testimonialsTrack');
+    if (!track || totalTestimonialsSlides === 0) return;
+
+    const isMobile = window.innerWidth <= 768;
+    let itemsToShow = isMobile ? 1 : 2;
+    let gapSize = 30; // match gap in CSS
+
+    const container = track.parentElement;
+    const paddingLeft = parseFloat(getComputedStyle(container).paddingLeft);
+    const paddingRight = parseFloat(getComputedStyle(container).paddingRight);
+    const containerWidth = container.offsetWidth - paddingLeft - paddingRight;
+
+    const itemWidth = (containerWidth - gapSize * (itemsToShow - 1)) / itemsToShow;
+    const distancePerSlide = itemWidth + gapSize;
+    const translateDistance = testimonialsSlide * distancePerSlide;
+
+    track.style.transform = `translateX(-${translateDistance}px)`;
+}
+
+// ============================================
+// SWIPE PARA CAROUSEL DE DEPOIMENTOS
+// ============================================
+let testimonialsTouchStartX = 0;
+let testimonialsTouchEndX = 0;
+
+function addTestimonialsSwipeListener() {
+    const testimonialsCarousel = document.querySelector('.testimonials-carousel');
+    if (!testimonialsCarousel) return;
+
+    testimonialsCarousel.addEventListener('touchstart', (e) => {
+        testimonialsTouchStartX = e.changedTouches[0].screenX;
+    }, false);
+
+    testimonialsCarousel.addEventListener('touchend', (e) => {
+        testimonialsTouchEndX = e.changedTouches[0].screenX;
+        handleTestimonialsSwipe();
+    }, false);
+}
+
+function handleTestimonialsSwipe() {
+    const swipeThreshold = 50;
+    const diff = testimonialsTouchStartX - testimonialsTouchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            // Swipe para esquerda = próximo slide
+            moveTestimonials(1);
+        } else {
+            // Swipe para direita = slide anterior
+            moveTestimonials(-1);
+        }
+    }
+}
+
+// ============================================
 // API DE DEPOIMENTOS
 // ============================================
 async function fetchTestimonials() {
-    const listContainer = document.getElementById('testimonialsList');
-    
+    const trackContainer = document.getElementById('testimonialsTrack');
+
     try {
-        // Simulação de API - substituir por chamada real
-        // const response = await fetch(`${CONFIG.apiEndpoint}?aprovado=true`);
-        // const testimonials = await response.json();
-        
-        // Mock data para demonstração
-        const testimonials = [
-            {
-                id: '1',
-                autor: 'Maria Silva',
-                mensagem: 'Que alegria ver vocês juntos! Desejo toda a felicidade do mundo para o casal. Parabéns! ❤️',
-                created_at: new Date().toISOString()
-            },
-            {
-                id: '2',
-                autor: 'João Pedro',
-                mensagem: 'Conheci vocês separados e agora juntos são ainda mais incríveis! Felicidades sempre!',
-                created_at: new Date().toISOString()
-            }
-        ];
-        
+        const response = await fetch('./testimonials.json');
+        const testimonials = await response.json();
+
         if (testimonials.length === 0) {
-            listContainer.innerHTML = `
+            trackContainer.innerHTML = `
                 <div class="testimonials-empty">
-                    <p>Seja o primeiro a deixar um depoimento para o casal! 💕</p>
+                    <p>Aguardando depoimentos... 💕</p>
                 </div>
             `;
             return;
         }
-        
-        listContainer.innerHTML = testimonials.map(t => createTestimonialCard(t)).join('');
-        
+
+        trackContainer.innerHTML = testimonials.map(t => createTestimonialCard(t)).join('');
+        totalTestimonialsSlides = testimonials.length;
+
     } catch (error) {
         console.error('Erro ao carregar depoimentos:', error);
-        listContainer.innerHTML = `
+        trackContainer.innerHTML = `
             <div class="testimonials-empty">
                 <p>Não foi possível carregar os depoimentos no momento.</p>
             </div>
@@ -373,52 +500,7 @@ function createTestimonialCard(testimonial) {
     `;
 }
 
-// ============================================
-// SUBMIT DE DEPOIMENTO
-// ============================================
-async function submitTestimonial(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const formData = new FormData(form);
-    const data = {
-        autor: formData.get('autor'),
-        email: formData.get('email'),
-        mensagem: formData.get('mensagem')
-    };
-    
-    // Validação
-    if (data.mensagem.length < 10) {
-        showNotification('A mensagem deve ter pelo menos 10 caracteres.', 'error');
-        return;
-    }
-    
-    if (data.mensagem.length > 1000) {
-        showNotification('A mensagem deve ter no máximo 1000 caracteres.', 'error');
-        return;
-    }
-    
-    try {
-        // Simulação de API - substituir por chamada real
-        // const response = await fetch(CONFIG.apiEndpoint, {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(data)
-        // });
-        
-        // if (!response.ok) throw new Error('Erro ao enviar depoimento');
-        
-        // Simular sucesso
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        showNotification('Depoimento enviado com sucesso! Ele será publicado após aprovação.', 'success');
-        form.reset();
-        
-    } catch (error) {
-        console.error('Erro ao enviar depoimento:', error);
-        showNotification('Erro ao enviar depoimento. Tente novamente.', 'error');
-    }
-}
+
 
 // ============================================
 // UTILITÁRIOS
@@ -469,6 +551,35 @@ function initSmoothScroll() {
             }
         });
     });
+
+    // Scroll indicator functionality
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', () => {
+            const target = document.querySelector('.story-section');
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+
+    // CTA primary button scroll to RSVP
+    const ctaPrimary = document.querySelector('.cta-primary');
+    if (ctaPrimary) {
+        ctaPrimary.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.querySelector('.rsvp-section');
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
 }
 
 // ============================================
@@ -494,15 +605,18 @@ document.addEventListener('DOMContentLoaded', () => {
         carousel.addEventListener('mouseleave', startCarouselAutoPlay);
     }
     
-    // Form de depoimentos
-    const testimonialForm = document.getElementById('testimonialForm');
-    if (testimonialForm) {
-        testimonialForm.addEventListener('submit', submitTestimonial);
-    }
+    // Carrinho
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+        btn.addEventListener('click', () => {
+            addToCart(btn.dataset.price, btn.dataset.title);
+        });
+    });
+    document.getElementById('generate-pix').addEventListener('click', generatePix);
     
     // Carregar depoimentos
     fetchTestimonials();
-    
+    addTestimonialsSwipeListener();
+
     // Animações
     initScrollAnimations();
     initSmoothScroll();

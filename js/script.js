@@ -407,7 +407,11 @@ function updateTestimonials() {
 
     const isMobile = window.innerWidth <= 768;
     let itemsToShow = isMobile ? 1 : 2;
-    let gapSize = 30; // match gap in CSS
+    let gapSize = 60; // default gap
+    if(isMobile == 1) {
+        gapSize = 30; // match gap in CSS
+    }
+    
 
     const container = track.parentElement;
     const paddingLeft = parseFloat(getComputedStyle(container).paddingLeft);

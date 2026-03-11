@@ -6,10 +6,6 @@ Um site elegante e responsivo para o convite de casamento de Aquila e Evelyn.
 
 Este projeto é um convite digital para o casamento, com design sofisticado e moderno. O site apresenta uma página inicial e uma página de convite com detalhes do evento, data, horário e local.
 
-**Data do Casamento:** Domingo, 03 de Maio de 2026  
-**Horário:** 16h30  
-**Local:** Rua Oratório, 3921 - Santo André/SP
-
 ## Características
 
 - Design responsivo (mobile, tablet e desktop)

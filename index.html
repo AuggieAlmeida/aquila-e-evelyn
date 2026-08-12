@@ -1,780 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport"
-			content="width=device-width, initial-scale=1.0">
-		<title>
-			Aquila & Evelyn - 03 de Maio, 2026
-		</title>
-		<link rel="stylesheet" href="./css/styles.css">
-    <link rel="icon" href="/assets/casal.png" type="image/x-icon">
-	</head>
-	<body>
-		<!-- Hero Section -->
-		<section class="hero">
-			<div class="hero-content">
-				<h1 class="hero-title">
-					<span class="groom-name name-line"><img src="./assets/aquila.png" alt="Nome do noivo"></span>
-                	<span class="ampersand">&</span>
-                	<span class="bride-name name-line"><img src="./assets/evelyn.png" alt="Nome da noiva"></span>
-            
-				</h1>
-				<blockquote class="hero-quote">
-					<p>
-						"O amor só é lindo quando encontramos alguém que nos transforme no melhor que podemos ser"
-					</p>
-					<cite>— Mario Quintana</cite>
-				</blockquote>
-				<div class="cta-primary">
-					Confirmar Presença
-				</div>
-			</div>
-			<div class="scroll-indicator">
-				<svg viewBox="0 0 24 24"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg">
-					<path d="M12 5v10M8 15l4 4 4-4"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"></path>
-				</svg>
-			</div>
-		</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aquila & Evelyn — demonstração pública de um convite digital responsivo."
+    />
+    <title>Aquila & Evelyn — Convite digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="Aquila e Evelyn — início">A<span>&</span>E</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Navegação principal" data-menu>
+        <a href="#conceito">Conceito</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#galeria">Galeria</a>
+        <span class="public-badge">Versão pública</span>
+      </nav>
+    </header>
 
-		<!-- Nossa Jornada -->
-		<section class="section story-section" id="story">
-			<div class="container">
-				<div class="section-header">
-					<span class="section-tag">Nossa Jornada</span>
-					<h2 class="section-title">Está só começando</h2>
-				</div>
-				<div class="story-grid">
-					<div class="story-image">
-						<img src="./assets/hero.jpg"
-							alt="Aquila e Evelyn juntos">
-					</div>
-					<div class="story-content">
-						<p class="story-text">
-							Poderíamos ter nos conhecido em muitos momentos ao longo da vida.
-							Talvez em outra fase, em outro lugar, em outra versão de nós mesmos.
-							Mas o universo escolheu 2023.
-							E sabemos que não foi mero acaso — foi destino. 
-						</p>
-						<p>
-							No dia 18/11/2023, começamos uma conversa que atravessou a madrugada. Rimos, falamos sobre música, relacionamentos, coisas leves e coisas profundas. Entre um assunto e outro, descobrimos algo silencioso e inevitável: aquilo não seria uma história breve de beijos. Havia algo maior ali.
-						</p>
-						<p>
-							Em 16/12/2023, no 39° andar de um prédio, com o mundo aos nossos pés, eu fiz o pedido de namoro (e ai dele se não aceitasse).
-							Ali começava oficialmente a nossa escolha.
-						</p>
-						<p>	
-							Desde então, mantivemos nossa essência: conversas leves e difíceis, risadas e choros, sonhos e medos compartilhados. E acima de tudo, continuamos nos escolhendo — todos os dias.
-						</p>
-						<p>
-						Em 13/07/2024, juntamos nossas coisas. Mais do que dividir um espaço, entendemos que o mundo nos juntou por um motivo.
-						</p>
-						<p>
-							E em 23/09/2024, quando fui pedida em casamento, selamos a certeza de que queremos caminhar lado a lado, sem perder a esperança, a parceria e o amor que nos trouxe até aqui.
-						</p>
-						<p>
-							Agora o grande dia se aproxima.
-							03/05/2026 será o dia em que, oficialmente, seremos um do outro — diante de Deus, da vida e das pessoas que amamos.
-						</p>
-						<p>
-							Mas, na verdade, já somos.<br>
-							Desde aquela madrugada que mudou tudo.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
+    <main>
+      <section class="hero" id="inicio">
+        <img class="botanical botanical-left" src="./assets/leaf.png" alt="" aria-hidden="true" />
+        <img class="botanical botanical-right" src="./assets/leaf2.png" alt="" aria-hidden="true" />
+        <div class="hero-glow" aria-hidden="true"></div>
 
-		<!-- Informações do Casamento -->
-		<section class="section info-section">
-			<div class="container">
-				<div class="section-header">
-					<span class="section-tag">Detalhes</span>
-					<h2 class="section-title">
-						Informações do Evento
-					</h2>
-				</div>
-				<div class="info-grid">
-					<div class="info-card">
-						<div class="info-icon">
-							<svg viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<rect x="3"
-									y="6"
-									width="18"
-									height="15"
-									rx="2"
-									stroke="currentColor"
-									stroke-width="2"></rect>
-								<path d="M3 10h18M8 3v3M16 3v3"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"></path>
-							</svg>
-						</div>
-						<h3>Data & Horário</h3>
-						<p>
-							Domingo
-							<br>
-							03 de Maio de 2026
-							<br>
-							<span>16h (Início da Cerimônia)</span>
-						</p>
-					</div>
-					<div class="info-card">
-						<div class="info-icon">
-							<svg viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
-									stroke="currentColor"
-									stroke-width="2"></path>
-								<circle cx="12"
-									cy="9"
-									r="2.5"
-									stroke="currentColor"
-									stroke-width="2"></circle>
-							</svg>
-						</div>
-						<h3>Local</h3>
-						<p>
-							Rua Oratório, 3921
-							<br>
-							Parque Novo Oratório
-							<br>
-							Santo André - SP
-						</p>
-					</div>
-					<div class="info-card">
-						<div class="info-icon">
-							<svg viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
-									stroke="currentColor"
-									stroke-width="2"></path>
-							</svg>
-						</div>
-						<h3>Traje</h3>
-						<p>
-							Passeio Completo
-							<br>
-							Evite tons de verde e lilás
-							<br>
-							<span>Use calçados confortáveis</span>
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Convite digital · experiência responsiva</p>
+          <div class="name-lockup" aria-label="Aquila e Evelyn">
+            <img src="./assets/aquila.png" alt="Aquila" />
+            <span>&</span>
+            <img src="./assets/evelyn.png" alt="Evelyn" />
+          </div>
+          <h1>Uma celebração traduzida em interface.</h1>
+          <p class="hero-description">
+            Uma experiência web delicada, animada e acessível, desenhada para transformar um convite em
+            uma pequena história interativa.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experiencia">Explorar experiência</a>
+            <a
+              class="button button-ghost"
+              href="https://github.com/AuggieAlmeida/aquila-e-evelyn"
+              target="_blank"
+              rel="noreferrer"
+            >Ver código</a>
+          </div>
+          <p class="privacy-note">Conteúdo pessoal e dados do evento foram removidos desta demonstração pública.</p>
+        </div>
 
-		<!-- Localização - Imagem e Mapa -->
-		<section class="location-section">
-			<div class="location-image">
-				<img src="./assets/location/loc1.jpg"
-					alt="Local do evento - Rua Oratório 1">
-				<img src="./assets/location/loc2.jpg"
-					alt="Local do evento - Rua Oratório 2">
-				<img src="./assets/location/loc3.jpg"
-					alt="Local do evento - Rua Oratório 3">
-			</div>
-			<div class="location-map">
-				<div class="embed-map-fixed">
-					<div class="embed-map-container">
-						<iframe class="embed-map-frame"
-							frameborder="0"
-							scrolling="no"
-							marginheight="0"
-							marginwidth="0"
-							src="https://maps.google.com/maps?width=600&height=400&hl=en&q=boa%20vista%20oratorio&t=&z=15&ie=UTF8&iwloc=B&output=embed"></iframe>
-						<a href="https://classicjoy.games"
-							style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">
-							Retro Games Online
-						</a>
-					</div>
-					<style>.embed-map-fixed{position:relative;text-align:right;width:100%;height:100%;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:inherit;}.embed-map-frame{width:100%!important;height:inherit!important;}</style>
-				</div>
-			</div>
-		</section>
+        <div class="hero-art reveal" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-frame">
+            <img src="./assets/casal.png" alt="" />
+          </div>
+          <span class="art-chip chip-top">HTML · CSS · JS</span>
+          <span class="art-chip chip-bottom">Mobile first</span>
+        </div>
 
-		<!-- Estacionamento -->
-		<section class="section parking-section">
-			<div class="container">
-				<div class="section-header">
-					<span class="section-tag">Informações Úteis</span>
-					<h2 class="section-title">Local</h2>
-					<p class="section-subtitle">
-						Conheça as opções de estacionamento próximas ao local do evento
-					</p>
-				</div>
-				<div class="parking-accordion">
-					<div class="accordion-item">
-						<button class="accordion-header" onclick="toggleAccordion(this)">
-							<span class="accordion-title">Estacionamento próximo ao local</span>
-							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-							</svg>
-						</button>
-						<div class="accordion-content">
-							<div class="accordion-body">
-								<p><strong>Local:</strong> Rua Oratório, 3945. Parque Novo Oratório - Santo André, SP</p>
-								<p><strong>Distância:</strong> Ao lado do local</p>
-								<p><strong>Custo:</strong> 25 reais - por período</p>
-								<p><strong>Segurança:</strong> Monitorado durante toda a cerimônia</p>
-								<p><strong>Observação:</strong> Muro preto do portão azul, ao lado do ponto de ônibus.</p>
-							</div>
-						</div>
-					</div>
+        <a class="scroll-cue" href="#conceito" aria-label="Ir para a próxima seção">
+          <span>Descobrir</span><i></i>
+        </a>
+      </section>
 
-					<div class="accordion-item">
-						<button class="accordion-header" onclick="toggleAccordion(this)">
-							<span class="accordion-title">Transporte alternativo</span>
-							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-							</svg>
-						</button>
-						<div class="accordion-content">
-							<div class="accordion-body">
-								<p><strong>Uber/99:</strong> Recomendado para facilitar o retorno após as celebrações</p>
-								<p><strong>Transporte público:</strong> Linhas de ônibus e trólebus próximas à Rua Oratório</p>
-								<p><strong>Dica:</strong> Se você planeja celebrar conosco, considere uma dessas opções para maior segurança!</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+      <section class="section concept" id="conceito">
+        <div class="section-heading reveal">
+          <p class="eyebrow">O conceito</p>
+          <h2>Romântico sem perder clareza.</h2>
+          <p>
+            Tipografia editorial, ilustrações botânicas e uma paleta de verde sálvia, lavanda e ouro
+            criam uma atmosfera íntima sem comprometer navegação e leitura.
+          </p>
+        </div>
 
-		<!-- Contagem Regressiva -->
-		<section class="countdown-section">
-			<div class="container">
-				<h2 class="countdown-title">
-					Contagem Regressiva para o Grande Dia
-				</h2>
-				<div class="countdown">
-					<div class="countdown-item">
-						<div class="countdown-number"
-							id="days">
-							0
-						</div>
-						<div class="countdown-label">Dias</div>
-					</div>
-					<div class="countdown-item">
-						<div class="countdown-number"
-							id="hours">
-							0
-						</div>
-						<div class="countdown-label">Horas</div>
-					</div>
-					<div class="countdown-item">
-						<div class="countdown-number"
-							id="minutes">
-							0
-						</div>
-						<div class="countdown-label">Minutos</div>
-					</div>
-					<div class="countdown-item">
-						<div class="countdown-number"
-							id="seconds">
-							0
-						</div>
-						<div class="countdown-label">Segundos</div>
-					</div>
-				</div>
-			</div>
-		</section>
+        <div class="principles">
+          <article class="principle reveal">
+            <span>01</span>
+            <h3>Identidade sob medida</h3>
+            <p>Composição visual própria, nomes em lettering e elementos ilustrados.</p>
+          </article>
+          <article class="principle reveal">
+            <span>02</span>
+            <h3>Ritmo de narrativa</h3>
+            <p>Seções que revelam o conteúdo aos poucos, como abrir um convite físico.</p>
+          </article>
+          <article class="principle reveal">
+            <span>03</span>
+            <h3>Privacidade por edição</h3>
+            <p>A versão pública preserva o design e remove mensagens, contatos e dados do evento.</p>
+          </article>
+        </div>
+      </section>
 
-		<!-- Galeria -->
-		<section class="section gallery-section">
-			<div class="container">
-				<div class="section-header">
-					<span class="section-tag">Momentos</span>
-					<h2 class="section-title">Pré-wedding</h2>
-				</div>
-				<div class="gallery-carousel">
-					<div class="gallery-carousel-track"
-						id="galleryTrack">
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic1.jpg"
-								alt="Momento 1">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic2.jpg"
-								alt="Momento 2">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic3.jpg"
-								alt="Momento 3">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic4.jpg"
-								alt="Momento 4">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic5.jpg"
-								alt="Momento 5">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic6.jpg"
-								alt="Momento 6">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic7.jpg"
-								alt="Momento 7">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic8.jpg"
-								alt="Momento 8">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic9.jpg"
-								alt="Momento 9">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic10.jpg"
-								alt="Momento 10">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic11.jpg"
-								alt="Momento 11">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic12.jpg"
-								alt="Momento 12">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic13.jpg"
-								alt="Momento 13">
-						</div>
-						<div class="gallery-item">
-							<img src="./assets/gallery/pic14.jpg"
-								alt="Momento 14">
-						</div>
-					</div>
-					<div class="gallery-carousel-controls">
-						<button class="carousel-btn prev"
-							onclick="moveGallery(-1)">
-							<svg viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M15 18l-6-6 6-6"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"></path>
-							</svg>
-						</button>
-						<button class="carousel-btn next"
-							onclick="moveGallery(1)">
-							<svg viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M9 18l6-6-6-6"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"></path>
-							</svg>
-						</button>
-					</div>
-				</div>
-			</div>
-		</section>
+      <section class="section experience" id="experiencia">
+        <div class="experience-copy reveal">
+          <p class="eyebrow">A experiência</p>
+          <h2>Do selo à tela, cada detalhe convida a interagir.</h2>
+          <p>
+            A interface combina transições suaves, estados de hover, navegação fluida e adaptação para
+            diferentes tamanhos de tela.
+          </p>
+          <ul class="feature-list">
+            <li><span>✦</span>Animações ativadas por scroll</li>
+            <li><span>✦</span>Componentes responsivos</li>
+            <li><span>✦</span>Interação por toque e teclado</li>
+            <li><span>✦</span>Progressive enhancement em JavaScript puro</li>
+          </ul>
+        </div>
 
-		<!-- Lista de Presentes -->
-		<section class="section gifts-section">
-			<div class="container">
-				<div class="section-header">
-					<span class="section-tag">Lista de</span>
-					<h2 class="section-title">Presentes</h2>
-					<p class="section-subtitle">
-						Sua presença já é o maior presente, mas se desejar nos presentear, ficaremos muito felizes!
-					</p>
-				</div>
-				<div class="carousel">
-					<div class="carousel-track"
-						id="carouselTrack">
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/acidente-bouquet.jpg"></div>
-							<h3>Seguro acidente pra hora do bouquet</h3>
-							<div class="pix-value">R$ 65,00</div>
-							<button class="gift-btn add-to-cart" data-price="65.00" data-title="Seguro acidente pra hora do bouquet">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/barra-vestido-noiva.jpg"></div>
-							<h3>Espaço para nome na barra do vestido</h3>
-							<div class="pix-value">R$ 100,00</div>
-							<button class="gift-btn add-to-cart" data-price="100.00" data-title="Espaço para nome na barra do vestido">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/abencoado.jpg"></div>
-							<h3>Deus te iluminou e você resolveu dar um bom presente</h3>
-							<div class="pix-value">R$ 200,00</div>
-							<button class="gift-btn add-to-cart" data-price="200.00" data-title="Deus te iluminou e você resolveu dar um bom presente">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img class="bigger" src="./assets/gifts/fantasia-noivo.jpg"></div>
-							<h3>Fantasia sexy pro noivo usar na lua de mel</h3>
-							<div class="pix-value">R$ 120,00</div>
-							<button class="gift-btn add-to-cart" data-price="120.00" data-title="Fantasia sexy pro noivo usar na lua de mel">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img class="bigger" src="./assets/gifts/mesa-doces.jpg"></div>
-							<h3>Sentar próximo a mesa de doces</h3>
-							<div class="pix-value">R$ 150,00</div>
-							<button class="gift-btn add-to-cart" data-price="150.00" data-title="Sentar próximo a mesa de doces">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/foto-noivo.jpg"></div>
-							<h3>Tirar foto com o noivo</h3>
-							<div class="pix-value">R$ 20,00</div>
-							<button class="gift-btn add-to-cart" data-price="20.00" data-title="Tirar foto com o noivo">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/mao-de-vaca.png"></div>
-							<h3>Só para não dizer que não dei nada</h3>
-							<div class="pix-value">R$ 25,00</div>
-							<button class="gift-btn add-to-cart" data-price="25.00" data-title="Só para não dizer que não dei nada">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img class="bigger" src="./assets/gifts/fantasia-noiva.jpg"></div>
-							<h3>Fantasia sexy pra noiva usar na lua de mel</h3>
-							<div class="pix-value">R$ 120,00</div>
-							<button class="gift-btn add-to-cart" data-price="120.00" data-title="Fantasia sexy pra noiva usar na lua de mel">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img class="bigger" src="./assets/gifts/quarto-visitas.jpg"></div>
-							<h3>Passe prioritário para o quarto de visitas</h3>
-							<div class="pix-value">R$ 150,00</div>
-							<button class="gift-btn add-to-cart" data-price="150.00" data-title="Passe prioritário para o quarto de visitas">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/bolo-cenoura.jpg"></div>
-							<h3>Bolo de cenoura semanal para a noiva</h3>
-							<div class="pix-value">R$ 80,00</div>
-							<button class="gift-btn add-to-cart" data-price="80.00" data-title="Bolo de cenoura semanal para a noiva">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/fila-buffet.jpg"></div>
-							<h3>Prioridade na fila do buffet</h3>
-							<div class="pix-value">R$ 90,00</div>
-							<button class="gift-btn add-to-cart" data-price="90.00" data-title="Prioridade na fila do buffet">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/curso-culinaria-noiva.png"></div>
-							<h3>Curso de culinária para a noiva</h3>
-							<div class="pix-value">R$ 100,00</div>
-							<button class="gift-btn add-to-cart" data-price="100.00" data-title="Curso de culinária para a noiva">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/jantar-pos-casamento.jpg"></div>
-							<h3>Jantar dos noivos no primeiro dia de casados</h3>
-							<div class="pix-value">R$ 60,00</div>
-							<button class="gift-btn add-to-cart" data-price="60.00" data-title="Jantar dos noivos no primeiro dia de casados">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/curso-culinaria-noivo.jpg"></div>
-							<h3>Curso de culinária para o noivo</h3>
-							<div class="pix-value">R$ 100,00</div>
-							<button class="gift-btn add-to-cart" data-price="100.00" data-title="Curso de culinária para o noivo">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img class="bigger" src="./assets/gifts/noivo-brega.jpg"></div>
-							<h3>Impedir o noivo de usar gravata brega</h3>
-							<div class="pix-value">R$ 250,00</div>
-							<button class="gift-btn add-to-cart" data-price="250.00" data-title="Impedir o noivo de usar gravata brega">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/forno-mondial.jpg"></div>
-							<h3>Forno elétrico Mondial com timer 6L preto Pratic Cook FR-09</h3>
-							<div class="pix-value">R$ 236,55</div>
-							<button class="gift-btn add-to-cart" data-price="236.55" data-title="Forno elétrico Mondial com timer 6L preto Pratic Cook FR-09">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/liquidificador-mondial.jpg"></div>
-							<h3>Liquidificador Mondial Easy Power L-550 preto</h3>
-							<div class="pix-value">R$ 30,00</div>
-							<button class="gift-btn add-to-cart" data-price="30.00" data-title="Liquidificador Mondial Easy Power L-550 preto">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/lava-loucas.jpg"></div>
-							<h3>Lava-louças Brastemp 8 serviços BLF08 - Cinza metálico</h3>
-							<div class="pix-value">R$ 2.699,00</div>
-							<button class="gift-btn add-to-cart" data-price="2699.00" data-title="Lava-louças Brastemp 8 serviços BLF08 - Cinza metálico">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img class="bigger" src="./assets/gifts/rolo-massas.jpg"></div>
-							<h3>Rolo de macarrão para a noiva utilizar quando necessário</h3>
-							<div class="pix-value">R$ 100,00</div>
-							<button class="gift-btn add-to-cart" data-price="100.00" data-title="Rolo de macarrão para a noiva utilizar quando necessário">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/varios-streamings.png"></div>
-							<h3>Ajudar a pagar todos os milhares de streamings</h3>
-							<div class="pix-value">R$ 300,00</div>
-							<button class="gift-btn add-to-cart" data-price="300.00" data-title="Ajudar a pagar todos os milhares de streamings">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/shot-tequila.jpg"></div>
-							<h3>Vale shot de tequila para os noivos tomarem na festa</h3>
-							<div class="pix-value">R$ 30,00</div>
-							<button class="gift-btn add-to-cart" data-price="30.00" data-title="Vale shot de tequila para os noivos tomarem na festa">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/excesso-bagagens.jpg"></div>
-							<h3>Ajudar a pagar o excesso de bagagem da noiva</h3>
-							<div class="pix-value">R$ 300,00</div>
-							<button class="gift-btn add-to-cart" data-price="300.00" data-title="Ajudar pra pagar o excesso de bagagem da noiva">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/sanduicheira-mondial.jpg"></div>
-							<h3>Sanduicheira Mondial Fast Grill S-12 preta 750W - Antiaderente</h3>
-							<div class="pix-value">R$ 110,00</div>
-							<button class="gift-btn add-to-cart" data-price="110.00" data-title="Sanduicheira Mondial Fast Grill S-12 preta 750W - Antiaderente">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/pipoqueira-mondial.jpg"></div>
-							<h3>Pipoqueira elétrica Mondial Popflix PP-03 1200W</h3>
-							<div class="pix-value">R$ 205,39</div>
-							<button class="gift-btn add-to-cart" data-price="205.39" data-title="Pipoqueira elétrica Mondial Popflix PP-03 1200W">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/chaleira-mondial.jpg"></div>
-							<h3>Chaleira elétrica Mondial Pratic Hot CE-07 preta 1L</h3>
-							<div class="pix-value">R$ 114,90</div>
-							<button class="gift-btn add-to-cart" data-price="114.90" data-title="Chaleira elétrica Mondial Pratic Hot CE-07 preta 1L">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/panela-grill-mondial.jpg"></div>
-							<h3>Panela elétrica multifuncional Grill redonda - Mondial</h3>
-							<div class="pix-value">R$ 235,55</div>
-							<button class="gift-btn add-to-cart" data-price="235.55" data-title="Panela elétrica multifuncional Grill redonda - Mondial">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/purificador-consul.jpg"></div>
-							<h3>Purificador de Água Consul CPB34AF - Cinza</h3>
-							<div class="pix-value">R$ 521,90</div>
-							<button class="gift-btn add-to-cart" data-price="521.90" data-title="Purificador de Água Consul CPB34AF - Cinza">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/robo-aspirador.jpg"></div>
-							<h3>Robô aspirador Electrolux ERB30</h3>
-							<div class="pix-value">R$ 1.181,71</div>
-							<button class="gift-btn add-to-cart" data-price="1181.71" data-title="Robô aspirador Electrolux ERB30">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img class="bigger" src="./assets/gifts/espaco-manduu.jpg"></div>
-							<h3>Jantar no Espaço Manduu</h3>
-							<div class="pix-value">R$ 300,00</div>
-							<button class="gift-btn add-to-cart" data-price="300.00" data-title="Jantar no Espaço Manduu">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/diaria-hotel.jpg"></div>
-							<h3>Diária - hotel</h3>
-							<div class="pix-value">R$ 350,00</div>
-							<button class="gift-btn add-to-cart" data-price="350.00" data-title="Diária - hotel">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img class="bigger" src="./assets/gifts/garrafa-espumante.png"></div>
-							<h3>Garrafa de vinho espumante</h3>
-							<div class="pix-value">R$ 100,00</div>
-							<button class="gift-btn add-to-cart" data-price="100.00" data-title="Garrafa de vinho espumante">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/casal-barco.jpg"></div>
-							<h3>Passeio de barco - casal</h3>
-							<div class="pix-value">R$ 380,00</div>
-							<button class="gift-btn add-to-cart" data-price="380.00" data-title="Passeio de barco - casal">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/jogo-cama-cinza.png"></div>
-							<h3>Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Cinza</h3>
-							<div class="pix-value">R$ 37,86</div>
-							<button class="gift-btn add-to-cart" data-price="37.86" data-title="Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Cinza">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/jogo-cama-preto.png"></div>
-							<h3>Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Preto</h3>
-							<div class="pix-value">R$ 36,13</div>
-							<button class="gift-btn add-to-cart" data-price="36.13" data-title="Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Preto">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/jogo-cama-branco.png"></div>
-							<h3>Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Branco</h3>
-							<div class="pix-value">R$ 37,86</div>
-							<button class="gift-btn add-to-cart" data-price="37.86" data-title="Jogo de cama casal poliéster Marcelino Têxtil 400 fios - Branco">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/cobertor-jolitex.jpg"></div>
-							<h3>Cobertor casal Jolitex poliéster azulejo</h3>
-							<div class="pix-value">R$ 145,48</div>
-							<button class="gift-btn add-to-cart" data-price="145.48" data-title="Cobertor casal Jolitex poliéster azulejo">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/colcha-karsten.jpg"></div>
-							<h3>Colcha casal Karsten 100% algodão branco e bege</h3>
-							<div class="pix-value">R$ 249,43</div>
-							<button class="gift-btn add-to-cart" data-price="249.43" data-title="Colcha casal Karsten 100% algodão branco e bege">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/jogo-taca-385.png"></div>
-							<h3>Jogo de taças para vinho vidro 385ml 6 peças - Nadir Barone</h3>
-							<div class="pix-value">R$ 64,30</div>
-							<button class="gift-btn add-to-cart" data-price="64.30" data-title="Jogo de taças para vinho vidro 385ml 6 peças - Nadir Barone">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon"><img src="./assets/gifts/jogo-taca-450.png"></div>
-							<h3>Jogo de taças para vinho vidro 450ml 6 peças - Haus</h3>
-							<div class="pix-value">R$ 119,88</div>
-							<button class="gift-btn add-to-cart" data-price="119.88" data-title="Jogo de taças para vinho vidro 450ml 6 peças - Haus">Adicionar ao Carrinho</button>
-						</div>
-						<div class="gift-card">
-							<div class="gift-icon gift-pix"><img src="./assets/gifts/qrcode-pix.png"></div>
-							<h3>PIX</h3>
-							<p>
-								Prefere contribuir diretamente? Ficaremos muito felizes!
-							</p>
-							<div class="pix-key">casamento.aquilaeevelyn@gmail.com</div>
-							<button class="gift-btn"
-								onclick="copyPix()">
-								Copiar Chave PIX
-							</button>
-						</div>
-					</div>
-					<div class="carousel-controls">
-						<button class="carousel-btn prev"
-							onclick="moveCarousel(-1)">
-							<svg viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M15 18l-6-6 6-6"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"></path>
-							</svg>
-						</button>
-						<button class="carousel-btn next"
-							onclick="moveCarousel(1)">
-							<svg viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M9 18l6-6-6-6"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"></path>
-							</svg>
-						</button>
-					</div>
-				</div>
-				<div class="cart-summary">
-					<h3>Carrinho de Compras</h3>
-					<ul id="cart-items"></ul>
-					<div class="cart-total">Total: R$ <span id="cart-total">0,00</span></div>
-					<button id="generate-pix" class="gift-btn">Gerar PIX</button>
-					<div id="pix-qrcode">
-						<img id="pix-qrcode-img" alt="QR Code PIX" style="display:none;">
-						<textarea id="pix-string" readonly placeholder="String PIX para copiar e colar" style="display:none;"></textarea>
-					</div>
-				</div>
-			</div>
-		</section>
+        <div class="invitation-demo reveal" data-invitation>
+          <div class="invitation-backdrop"></div>
+          <div class="invitation-card">
+            <img class="card-flower" src="./assets/flower.png" alt="" aria-hidden="true" />
+            <p class="card-kicker">Você está convidado</p>
+            <h3>Aquila <em>&</em> Evelyn</h3>
+            <p>Uma celebração feita de afeto, presença e novos começos.</p>
+            <div class="demo-details">
+              <span>Detalhes reservados</span>
+              <span>Convite individual</span>
+            </div>
+            <button class="wax-seal" type="button" data-seal aria-pressed="false">
+              <span>A&E</span>
+            </button>
+            <small>Clique no selo para abrir</small>
+          </div>
+        </div>
+      </section>
 
-		<!-- Depoimentos -->
-		<section class="section testimonials-section">
-			<div class="container">
-				<div class="section-header">
-					<span class="section-tag">Mensagens</span>
-					<h2 class="section-title">
-						Deixe seu Depoimento
-					</h2>
-					<p class="section-subtitle">
-						Compartilhe suas palavras de carinho e bons votos para o casal
-					</p>
-				</div>
-				<div class="testimonials-carousel">
-					<div class="testimonials-carousel-track"
-						id="testimonialsTrack">
-						<div class="testimonials-loading">
-							<div class="loading-spinner"></div>
-							<p>
-								Carregando depoimentos...
-							</p>
-						</div>
-					</div>
-					<div class="testimonials-carousel-controls">
-						<button class="carousel-btn prev"
-							onclick="moveTestimonials(-1)">
-							<svg viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M15 18l-6-6 6-6"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"></path>
-							</svg>
-						</button>
-						<button class="carousel-btn next"
-							onclick="moveTestimonials(1)">
-							<svg viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M9 18l6-6-6-6"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"></path>
-							</svg>
-						</button>
-					</div>
-				</div>
-			</div>
-		</section>
+      <section class="section visual-system" id="galeria">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Sistema visual</p>
+          <h2>Três camadas, uma mesma linguagem.</h2>
+        </div>
 
-		<!-- RSVP -->
-		<section class="rsvp-section"
-			id="rsvp">
-			<div class="container">
-				<div class="rsvp-content">
-					<h2 class="rsvp-title">
-						Confirme sua Presença
-					</h2>
-					<p class="rsvp-text">
-						Por favor, confirme sua presença até 03 de Abril de 2026.
-					</p>
-					<a href="https://forms.gle/eeJLr5Uppvkh39CZ9"
-						target="_blank"
-						class="cta-primary">
-						Confirmar Agora
-					</a>
-				</div>
-			</div>
-		</section>
+        <div class="showcase-grid">
+          <article class="showcase showcase-botanical reveal">
+            <img src="./assets/leaf.png" alt="Ilustração de folhagem" />
+            <div>
+              <span>01 · Botânica</span>
+              <h3>Formas orgânicas</h3>
+            </div>
+          </article>
+          <article class="showcase showcase-type reveal">
+            <span class="script-word">Afeto</span>
+            <div>
+              <span>02 · Tipografia</span>
+              <h3>Editorial e humana</h3>
+            </div>
+          </article>
+          <article class="showcase showcase-motion reveal">
+            <div class="motion-rings">
+              <img src="./assets/rings.png" alt="Ilustração de alianças" />
+            </div>
+            <div>
+              <span>03 · Movimento</span>
+              <h3>Delicado e funcional</h3>
+            </div>
+          </article>
+        </div>
+      </section>
 
-		<!-- Footer -->
-		<footer class="footer">
-			<div class="container">
-				<div class="footer-content">
-					<div class="footer-rings">
-						<img src="./assets/rings.png"
-							alt="Alianças">
-					</div>
-					<p class="footer-names">Aquila & Evelyn</p>
-					<p class="footer-date">03 de Maio de 2026</p>
-					<p class="footer-contact">
-						Dúvidas? Entre em contato:
-						<a href="mailto:casamento.aquilaeevelyn@gmail.com">casamento.aquilaeevelyn@gmail.com</a>
-					</p>
-					<p class="footer-copy">
-						&copy; 2026 - Feito com amor por Augusto
-					</p>
-				</div>
-			</div>
-		</footer>
+      <section class="closing">
+        <img src="./assets/flower.png" alt="" aria-hidden="true" />
+        <p class="eyebrow">Projeto entregue</p>
+        <h2>Design que guarda a memória,<br />sem expor a intimidade.</h2>
+        <a class="button button-primary" href="#inicio">Voltar ao início</a>
+      </section>
+    </main>
 
-		<script src="js/script.js"></script>
-	</body>
+    <footer>
+      <span>Aquila & Evelyn</span>
+      <p>Demonstração pública · conteúdo sanitizado</p>
+      <a href="https://github.com/AuggieAlmeida/aquila-e-evelyn">GitHub</a>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
 </html>
